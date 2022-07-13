@@ -2,7 +2,7 @@ local Remap = require("gccnvim.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
 
-local sumneko_root_path = "/home/cupoftea/.dotfiles/lua-language-server"
+local sumneko_root_path = vim.env.HOME .. "/.dotfiles/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
