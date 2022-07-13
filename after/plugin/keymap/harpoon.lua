@@ -1,4 +1,4 @@
-local nnoremap = require("gccnvim.keymap").nnoremap
+local nnoremap = require("gcc.keymap").nnoremap
 
 local silent = { silent = true }
 
