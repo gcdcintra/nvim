@@ -94,7 +94,9 @@ require("lspconfig").clangd.setup(config({
     end,
 }))
 
-require 'lspconfig'.cmake.setup {}
+require('lspconfig').cmake.setup{}
+
+require('lspconfig').pyright.setup{}
 
 require("lspconfig").sumneko_lua.setup(config({
     cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
