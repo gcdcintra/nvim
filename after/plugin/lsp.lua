@@ -17,6 +17,7 @@ local source_mapping = {
     cmp_tabnine = "[TN]",
     path = "[Path]",
 }
+
 local lspkind = require("lspkind")
 
 cmp.setup({
