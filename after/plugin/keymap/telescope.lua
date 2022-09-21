@@ -1,7 +1,7 @@
 local Remap = require("gccnvim.keymap")
 local nnoremap = Remap.nnoremap
 
--- Telescope keymap
+-- Telescope builtin
 nnoremap("<C-p>", ":Telescope")
 nnoremap("<leader>ps", function()
     require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ") })
@@ -22,21 +22,19 @@ nnoremap("<leader>ph", function()
     require('telescope.builtin').help_tags()
 end)
 
--- gccnvim.telescope keymap
-nnoremap("<leader>vrc", function()
-    require('gccnvim.telescope').search_dotfiles({ hidden = true })
+-- Telescope custom
+nnoremap("<leader>vrm", function()
+    require('gccnvim.telescope-reload').reload()
 end)
 nnoremap("<leader>va", function()
     require('gccnvim.telescope').anime_selector()
 end)
-nnoremap("<leader>vc", function()
-    require('gccnvim.telescope').chat_selector()
+nnoremap("<leader>vrr", function()
+    require('gccnvim.telescope').refactors()
 end)
 nnoremap("<leader>gb", function()
     require('gccnvim.telescope').git_branches()
 end)
-
--- gccnvim.telescope keymap
 nnoremap("<leader>gw", function()
     require('gccnvim.telescope').extensions.git_worktree.git_worktrees()
 end)

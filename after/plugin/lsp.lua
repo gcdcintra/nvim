@@ -81,23 +81,15 @@ local function config(_config)
             nnoremap("<leader>rn", function() vim.lsp.buf.rename() end)
             nnoremap("<leader>ff", function() vim.lsp.buf.formatting() end)
             nnoremap("<leader>cc", function() vim.lsp.buf.code_lens() end)
-            nnoremap("<C-s>", function() vim.lsp.buf.document_symbol() end)
-            nnoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
+            nnoremap("<leader>hs", function() vim.lsp.buf.document_symbol() end)
+            nnoremap("<leader>hh", function() vim.lsp.buf.signature_help() end)
         end,
     }, _config or {})
 end
 
-require("lspconfig").clangd.setup(config({
-    cmd = { "clangd", "--background-index", "--log=verbose" },
-    root_dir = function()
-        print("clangd-Rootdir", vim.loop.cwd())
-        return vim.loop.cwd()
-    end,
-}))
-
-require('lspconfig').cmake.setup{}
-
-require('lspconfig').pyright.setup{}
+require("clangd_extensions").setup()
+require('lspconfig').cmake.setup {}
+require('lspconfig').pyright.setup {}
 
 require("lspconfig").sumneko_lua.setup(config({
     cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },

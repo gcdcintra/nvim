@@ -22,18 +22,8 @@ require("telescope").setup({
 require("telescope").load_extension("git_worktree")
 -- require("telescope").load_extension("fzy_native")
 
-local M = {}
-
-function M.reload_modules()
-	local lua_dirs = vim.fn.glob("./lua/*", 0, 1)
-	for _, dir in ipairs(lua_dirs) do
-		dir = string.gsub(dir, "./lua/", "")
-		require("plenary.reload").reload_module(dir)
-	end
-end
-
 local function set_background(content)
-	vim.fn.system("dconf write /org/mate/desktop/background/picture-filename \"'" .. content .. "'\"")
+	vim.fn.system("feh --bg-scale " .. content)
 end
 
 local function select_background(prompt_bufnr, map)
@@ -71,13 +61,23 @@ local function image_selector(prompt, cwd)
 	end
 end
 
-M.anime_selector = image_selector("< Anime Bobs > ", "~/personal/anime")
-
 local function refactor(prompt_bufnr)
 	local content = require("telescope.actions.state").get_selected_entry(prompt_bufnr)
 	require("telescope.actions").close(prompt_bufnr)
 	require("refactoring").refactor(content.value)
 end
+
+local M = {}
+
+function M.reload_modules()
+	local lua_dirs = vim.fn.glob("./lua/*", 0, 1)
+	for _, dir in ipairs(lua_dirs) do
+		dir = string.gsub(dir, "./lua/", "")
+		require("plenary.reload").reload_module(dir)
+	end
+end
+
+M.anime_selector = image_selector("< Anime Bobs > ", "~/personal/wallpapers")
 
 M.refactors = function()
 	require("telescope.pickers").new({}, {
@@ -102,6 +102,10 @@ M.git_branches = function()
 			return true
 		end,
 	})
+end
+
+M.select_theme = function()
+    require("telescope.builtin").select_theme()
 end
 
 return M

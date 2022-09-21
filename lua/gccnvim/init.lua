@@ -1,8 +1,8 @@
 local augroup = vim.api.nvim_create_augroup
 AuGroup = augroup('gccnvimGroup', {})
 
--- require("gccnvim.cmp-use-rust")
 require("gccnvim.set")
+require("gccnvim.colors")
 require("gccnvim.plugins")
 require("gccnvim.neogit")
 
