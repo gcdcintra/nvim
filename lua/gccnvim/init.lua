@@ -5,6 +5,11 @@ require("gccnvim.set")
 require("gccnvim.colors")
 require("gccnvim.plugins")
 require("gccnvim.neogit")
+require("gccnvim.nvim-tree")
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})

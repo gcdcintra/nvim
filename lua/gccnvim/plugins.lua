@@ -34,16 +34,21 @@ return require('packer').startup(function(use)
     use("gruvbox-community/gruvbox")
     use("folke/tokyonight.nvim")
 
-    -- ThePrimeagen blazingly fast plugins
+    -- Blazingly fast plugins
     use("ThePrimeagen/git-worktree.nvim")
     use("ThePrimeagen/harpoon")
 
-    -- Other
-    use("nvim-treesitter/nvim-treesitter", {
-        run = ":TSUpdate"
-    })
+    -- NvimTree
+    use { 'kyazdani42/nvim-tree.lua',
+        requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly'
+    }
+
+    -- Treesitter
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("nvim-treesitter/playground")
     use("romgrk/nvim-treesitter-context")
+
+    -- Others
     use("mbbill/undotree")
     use("mfussenegger/nvim-dap")
     use("rcarriga/nvim-dap-ui")
