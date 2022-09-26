@@ -8,6 +8,12 @@ end)
 nnoremap("<leader>ps", function()
     require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ") })
 end)
+
+-- Fuzzy find current buffer
+nnoremap("<C-_>", function()
+    require('gccnvim.telescope').fzz_current_buffer()
+end)
+
 --nnoremap("<leader>pt", function()
 --    require('telescope.builtin').treesitter()
 --end)

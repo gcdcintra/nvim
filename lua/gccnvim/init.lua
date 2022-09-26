@@ -1,6 +1,7 @@
 require("gccnvim.set")
 require("gccnvim.colors")
 require("gccnvim.plugins")
+require("gccnvim.telescope")
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
