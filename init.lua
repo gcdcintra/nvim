@@ -1,1 +1,6 @@
-require("gccnvim")
+require("gcc.plugins")
+require("gcc.set")
+require("gcc.theme")
+require("gcc.autosave")
+require("gcc.lsp")
+require("gcc.dap")

@@ -3,7 +3,6 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.hidden = true
 vim.opt.errorbells = false
 
 vim.opt.tabstop = 4
@@ -41,4 +40,4 @@ vim.opt.shortmess:append("c")
 
 vim.opt.colorcolumn = "80"
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
