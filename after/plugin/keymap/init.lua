@@ -60,3 +60,8 @@ nnoremap("<leader>do", "<cmd>lua require('dap').step_over()<CR>")
 nnoremap("<leader>du", "<cmd>lua require('dap').step_out()<CR>")
 nnoremap("<leader>dr", "<cmd>lua require('dap').repl.open()<CR>")
 nnoremap("<leader>dl", "<cmd>lua require('dap').run_last()<CR>")
+nnoremap("<leader>ds", "<cmd>lua require('dap').disconnect(); require('dap').run_last()<CR>")
+
+-- Autosave toggle
+nnoremap("<leader>ab", "<cmd>lua require('gcc.autosave').toggle_cpp_build()<CR>")
+nnoremap("<leader>af", "<cmd>lua require('gcc.autosave').toogle_autoformat()<CR>")

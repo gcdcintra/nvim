@@ -12,22 +12,19 @@ dap.configurations.cpp = {
     type = "cppdbg",
     request = "launch",
     program = function()
-      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+      -- Get the first "$bin" from add_executable parameter in CMakeLists.txt
+      -- where add_executable($bin ...)
+      local binary = nil
+      for line in io.lines("CMakeLists.txt") do
+        binary = line:match("add_executable%((%S+)")
+        if binary then
+          break
+        end
+      end
+      return vim.fn.getcwd() .. "/build/" .. binary
     end,
     cwd = "${workspaceFolder}",
     stopAtEntry = true,
-  },
-  {
-    name = "Attach to gdbserver :1234",
-    type = "cppdbg",
-    request = "launch",
-    MIMode = "gdb",
-    miDebuggerServerAddress = "localhost:1234",
-    miDebuggerPath = "/usr/bin/gdb",
-    cwd = "${workspaceFolder}",
-    program = function()
-      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-    end,
   },
 }
 

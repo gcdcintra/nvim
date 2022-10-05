@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   neoformat = {
     loaded = true,
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/neoformat",
@@ -180,9 +185,8 @@ _G.packer_plugins = {
     url = "https://github.com/romgrk/nvim-treesitter-context"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/gccintra/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {

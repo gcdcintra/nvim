@@ -26,7 +26,7 @@ return require("packer").startup(function(use)
 
   use({
     "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    requires = { "kyazdani42/nvim-web-devicons" },
   })
 
   -- All the things
@@ -56,6 +56,9 @@ return require("packer").startup(function(use)
   -- Colorscheme
   use("gruvbox-community/gruvbox")
   use("folke/tokyonight.nvim")
+
+  -- Markdown
+  use {'iamcco/markdown-preview.nvim'}
 
   if packer_bootstrap then
     require("packer").sync()
