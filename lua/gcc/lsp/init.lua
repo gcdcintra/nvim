@@ -148,10 +148,10 @@ require("lspconfig").clangd.setup(config({
     "--header-insertion=iwyu",
   },
   root_dir = require("lspconfig").util.root_pattern(
+    "build/compile_commands.json",
     ".clangd",
     ".clang-tidy",
     ".clang-format",
-    "build/compile_commands.json",
     "compile_flags.txt",
     "configure.ac",
     ".git"

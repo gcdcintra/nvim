@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["git-worktree.nvim"] = {
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
+    url = "https://github.com/ThePrimeagen/git-worktree.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -174,6 +179,12 @@ _G.packer_plugins = {
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-terminal"] = {
+    config = { "\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0" },
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/nvim-terminal",
+    url = "https://github.com/s1n7ax/nvim-terminal"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -233,10 +244,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-terminal
+time([[Config for nvim-terminal]], true)
+try_loadstring("\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0", "config", "nvim-terminal")
+time([[Config for nvim-terminal]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

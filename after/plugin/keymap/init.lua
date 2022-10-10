@@ -1,6 +1,7 @@
 local Remap = require("gcc.keymap")
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
+local tnoremap = Remap.tnoremap
 local nmap = Remap.nmap
 
 nnoremap("<leader>pv", ":Ex<CR>")
@@ -65,3 +66,6 @@ nnoremap("<leader>ds", "<cmd>lua require('dap').disconnect(); require('dap').run
 -- Autosave toggle
 nnoremap("<leader>ab", "<cmd>lua require('gcc.autosave').toggle_cpp_build()<CR>")
 nnoremap("<leader>af", "<cmd>lua require('gcc.autosave').toogle_autoformat()<CR>")
+
+-- Terminal
+tnoremap("<Esc>", "<C-\\><C-n>")

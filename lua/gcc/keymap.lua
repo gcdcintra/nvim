@@ -13,5 +13,6 @@ M.nnoremap = Bind("n")
 M.vnoremap = Bind("v")
 M.xnoremap = Bind("x")
 M.inoremap = Bind("i")
+M.tnoremap = Bind("t")
 
 return M

@@ -35,6 +35,7 @@ M.toggle_cpp_build = function()
         local cmd = "cd " .. cwd .. " && cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug"
         cmd = cmd .. " -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake --build build"
         vim.fn.jobstart(cmd, { detach = false })
+        cmd = "cd " .. cwd .. " && cp build/compile_commands.json ."
       end,
     })
   else

@@ -1,7 +1,6 @@
 vim.g.termguicolors = true
 vim.g.colorscheme = "gruvbox"
---vim.g.colorscheme = "tokyonight-night"
---vim.g.colorscheme = "OceanicNext"
+-- vim.g.colorscheme = "tokyonight"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"

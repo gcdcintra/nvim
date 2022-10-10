@@ -14,6 +14,8 @@ local packer_bootstrap = ensure_packer()
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   use("sbdchd/neoformat")
+  use("kyazdani42/nvim-web-devicons")
+  use("tpope/vim-commentary")
 
   use("TimUntersberger/neogit")
   use("github/copilot.vim")
@@ -23,6 +25,7 @@ return require("packer").startup(function(use)
   use("nvim-lua/popup.nvim")
   use("nvim-telescope/telescope.nvim")
   use("ThePrimeagen/harpoon")
+  use("ThePrimeagen/git-worktree.nvim")
 
   use({
     "nvim-lualine/lualine.nvim",
@@ -60,6 +63,14 @@ return require("packer").startup(function(use)
 
   -- Markdown
   use({ "iamcco/markdown-preview.nvim" })
+
+  -- Terminal
+  use({
+    's1n7ax/nvim-terminal',
+    config = function()
+        vim.o.hidden = true
+        require('nvim-terminal').setup()
+    end,})
 
   if packer_bootstrap then
     require("packer").sync()
