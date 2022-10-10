@@ -1,5 +1,7 @@
--- vim.g.colorscheme = "gruvbox"
-vim.g.colorscheme = "tokyonight"
+vim.g.termguicolors = true
+vim.g.colorscheme = "gruvbox"
+--vim.g.colorscheme = "tokyonight-night"
+--vim.g.colorscheme = "OceanicNext"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -24,7 +26,7 @@ function ColorMyPencils()
   })
 
   hl("CursorLineNR", {
-    bg = "None",
+    bg = "none",
   })
 
   hl("Normal", {

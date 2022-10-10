@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["oceanic-next"] = {
+    loaded = true,
+    path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/oceanic-next",
+    url = "https://github.com/mhartington/oceanic-next"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/gccintra/.local/share/nvim/site/pack/packer/start/packer.nvim",

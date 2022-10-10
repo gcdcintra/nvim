@@ -56,9 +56,10 @@ return require("packer").startup(function(use)
   -- Colorscheme
   use("gruvbox-community/gruvbox")
   use("folke/tokyonight.nvim")
+  use("mhartington/oceanic-next")
 
   -- Markdown
-  use {'iamcco/markdown-preview.nvim'}
+  use({ "iamcco/markdown-preview.nvim" })
 
   if packer_bootstrap then
     require("packer").sync()
