@@ -50,5 +50,12 @@ null_ls.setup {
         formatting.isort.with {
             filetypes = { "python" },
         },
+
+        diagnostics.shellcheck.with {
+            filetypes = { "sh" },
+        },
+        formatting.shfmt.with {
+            filetypes = { "sh" },
+        },
     },
 }

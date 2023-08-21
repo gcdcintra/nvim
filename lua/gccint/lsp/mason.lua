@@ -6,6 +6,7 @@ local servers = {
     "zk",
     "grammarly",
     "pyright",
+    "bashls",
 }
 
 local settings = {
