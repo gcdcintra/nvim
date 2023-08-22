@@ -1,5 +1,5 @@
 require "gccint.options"
-require "gccint.packer"
+require "gccint.lazy"
 require "gccint.impatient"
 require "gccint.colorscheme"
 require "gccint.lualine"
