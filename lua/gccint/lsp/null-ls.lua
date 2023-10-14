@@ -5,57 +5,23 @@ end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
-local hover = null_ls.builtins.hover
-local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup {
     debug = false,
     sources = {
-        -- lua
-        formatting.stylua.with {
-            filetypes = { "lua" },
-        },
-
-        -- cmake
+        formatting.stylua,
         formatting.gersemi,
-
-        diagnostics.cmake_lint.with {
-            filetypes = { "cmake" },
-        },
-
-        -- Git
-        diagnostics.commitlint.with {
-            filetypes = { "gitcommit" },
-        },
-
-        -- Markdown
-        diagnostics.write_good.with {
-            filetypes = { "markdown" },
-        },
-        formatting.markdownlint.with {
-            filetypes = { "markdown" },
-        },
-        diagnostics.markdownlint.with {
-            filetypes = { "markdown" },
-        },
-
-        -- Python
-        diagnostics.flake8.with {
-            filetypes = { "python" },
-        },
+        formatting.markdownlint,
         formatting.black.with {
-            filetypes = { "python" },
             extra_args = { "--line-length 80" },
         },
-        formatting.isort.with {
-            filetypes = { "python" },
-        },
+        formatting.isort,
+        formatting.shfmt,
 
-        diagnostics.shellcheck.with {
-            filetypes = { "sh" },
-        },
-        formatting.shfmt.with {
-            filetypes = { "sh" },
-        },
+        diagnostics.shellcheck,
+        diagnostics.commitlint,
+        diagnostics.write_good,
+        diagnostics.markdownlint,
+        diagnostics.flake8,
     },
 }

@@ -11,7 +11,7 @@ M.setup = function()
     local signs = {
         { name = "DiagnosticSignError", text = "" },
         { name = "DiagnosticSignWarn", text = "" },
-        { name = "DiagnosticSignHint", text = "" },
+        { name = "DiagnosticSignHint", text = "" },
         { name = "DiagnosticSignInfo", text = "" },
     }
 
@@ -119,9 +119,9 @@ M.on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
     end
 
-    if client.name == "neocmake-ls" then
-        client.server_capabilities.documentFormattingProvider = false
-    end
+    -- if client.name == "neocmake-ls" then
+    --     client.server_capabilities.documentFormattingProvider = false
+    -- end
 
     -- if client.name == "clangd" then
     --     client.server_capabilities.documentFormattingProvider = false

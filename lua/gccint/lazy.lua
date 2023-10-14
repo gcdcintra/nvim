@@ -12,31 +12,33 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
+    "jacquesg/p5-Neovim-Ext",
     "nvim-lua/plenary.nvim",
     "windwp/nvim-autopairs",
     "numToStr/Comment.nvim",
     "JoosepAlviste/nvim-ts-context-commentstring",
     "kyazdani42/nvim-web-devicons",
-    "kyazdani42/nvim-tree.lua",
-    "akinsho/bufferline.nvim",
     "moll/vim-bbye",
+    "akinsho/bufferline.nvim",
     "nvim-lualine/lualine.nvim",
     "akinsho/toggleterm.nvim",
-    "lewis6991/impatient.nvim",
     "lukas-reineke/indent-blankline.nvim",
-    "mattn/webapi-vim",
     {
         "NeogitOrg/neogit",
         dependencies = {
-            "nvim-lua/plenary.nvim", -- required
-            "nvim-telescope/telescope.nvim", -- optional
-            "sindrets/diffview.nvim", -- optional
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+            "sindrets/diffview.nvim",
         },
         config = true,
     },
+
+    -- Themes
     "folke/tokyonight.nvim",
     "rose-pine/neovim",
     { "catppuccin/nvim", name = "catppuccin" },
+
+    -- LSP/Completion/Linting stuff
     "neovim/nvim-lspconfig",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

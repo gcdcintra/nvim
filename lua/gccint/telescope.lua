@@ -7,7 +7,7 @@ local actions = require "telescope.actions"
 
 telescope.setup {
     defaults = {
-        prompt_prefix = " ",
+        prompt_prefix = "  ",
         selection_caret = " ",
         file_ignore_patterns = {
             ".git/",
@@ -25,22 +25,4 @@ telescope.setup {
             },
         },
     },
-    -- pickers = {
-    --     find_files = {
-    --         find_command = {
-    --             "rg",
-    --             "--files",
-    --             "--no-ignore-vcs",
-    --             "--hidden",
-    --             "--follow",
-    --             "--glob",
-    --             "!.git",
-    --             "--glob",
-    --             "!.gitmodules",
-    --             "--glob",
-    --             "!.cache",
-    --             "--glob",
-    --         },
-    --     },
-    -- },
 }

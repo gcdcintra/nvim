@@ -11,7 +11,7 @@ local diagnostics = {
     "diagnostics",
     sources = { "nvim_diagnostic" },
     sections = { "error", "warn" },
-    symbols = { error = " ", warn = " " },
+    symbols = { error = " ", warn = " " },
     colored = true,
     always_visible = true,
 }
@@ -25,7 +25,7 @@ local filename = {
 
     symbols = {
         modified = "",
-        readonly = "",
+        readonly = "",
         unnamed = "",
         newfile = "",
     },
@@ -34,7 +34,7 @@ local filename = {
 local diff = {
     "diff",
     colored = true,
-    symbols = { added = " ", modified = " ", removed = " " },
+    symbols = { added = " ", modified = " ", removed = " " },
     cond = hide_in_width,
 }
 

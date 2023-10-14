@@ -1,7 +1,7 @@
+vim.g.perl_host_prog = "/usr/bin/perl"
 vim.g.mapleader = ","
-
 vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
-vim.opt.colorcolumn = "81"
+vim.api.nvim_set_option_value("colorcolumn", "81,82", {})
 vim.opt.termguicolors = true
 vim.opt.guicursor = ""
 vim.opt.cmdheight = 1

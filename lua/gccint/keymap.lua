@@ -5,33 +5,32 @@ local opts = { silent = true }
 keymap("n", "<CR>", "", opts)
 keymap("n", " ", "", opts)
 
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Window navigation.
+keymap("n", "<M-z>", "<C-w>q", opts)
+keymap("n", "<M-v>", "<C-w>v", opts)
+keymap("n", "<M-b>", "<C-w>s", opts)
+keymap("n", "<M-h>", "<C-w>h", opts)
+keymap("n", "<M-j>", "<C-w>j", opts)
+keymap("n", "<M-k>", "<C-w>k", opts)
+keymap("n", "<M-l>", "<C-w>l", opts)
 
--- Resize with arrows
+-- Window resizing.
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
+-- Buffer motions.
+keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
-
--- Move buffers
 keymap("n", "<C-l>", ":BufferLineMoveNext<CR>", opts)
 keymap("n", "<C-h>", ":BufferLineMovePrev<CR>", opts)
 
--- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
-
--- Better paste
+-- Substitute selected text the pasted text.
 keymap("v", "p", '"_dP', opts)
 
--- Stay in indent mode
+-- Indent selected lines and stay in indent mode.
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
@@ -39,7 +38,7 @@ keymap("n", "<leader>y", '"+y', opts)
 keymap("v", "<leader>y", '"+y', opts)
 keymap("n", "<leader>Y", '"+Y', opts)
 
--- Substitute
+-- Substitute word under cursor in the current file.
 keymap(
     "n",
     "<leader>s",
@@ -47,7 +46,7 @@ keymap(
     opts
 )
 
--- Find and replace in all .h, .cpp files of the current directory
+-- Find and replace in all .h, .cpp files of the current directory.
 keymap(
     "n",
     "<leader><leader>s",
@@ -55,6 +54,7 @@ keymap(
     opts
 )
 
+-- TODO: Find a better way to do this.
 keymap(
     "n",
     "<leader>cr",
@@ -66,8 +66,10 @@ keymap(
 keymap("n", "<space>", ":ClangdSwitchSourceHeader<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>l", "<cmd>IlluminateToggle<cr>", opts)
+-- keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
+-- keymap("n", "<leader>l", "<cmd>IlluminateToggle<cr>", opts)
+
+-- keymap("i", "<leader>cp", require("copilot.panel").open, opts)
 
 -- Telescope
 keymap("n", "<BS>f", require("telescope.builtin").find_files, opts)
@@ -95,5 +97,3 @@ keymap("n", "<leader>dr", dap.repl.toggle, opts)
 keymap("n", "<leader>dl", dap.run_last, opts)
 keymap("n", "<leader>dt", dap.terminate, opts)
 keymap("n", "<leader>du", require("dapui").toggle, opts)
-
-keymap("n", "<leader>cp", require("copilot.panel").open, opts)
