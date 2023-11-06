@@ -12,6 +12,7 @@ telescope.setup {
         file_ignore_patterns = {
             ".git/",
             "external",
+            "third*",
             "node_modules",
             "build/",
             "dist",
