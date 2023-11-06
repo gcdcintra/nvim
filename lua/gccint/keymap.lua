@@ -85,15 +85,3 @@ keymap("n", "<C-_>", require("Comment.api").toggle.linewise.current, opts)
 keymap("x", "<C-_>", function()
     require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end, opts)
-
--- DAP
-local dap = require "dap"
-keymap("n", "<leader>db", dap.toggle_breakpoint, opts)
-keymap("n", "<leader>dc", dap.continue, opts)
-keymap("n", "<leader>di", dap.step_into, opts)
-keymap("n", "<leader>do", dap.step_over, opts)
-keymap("n", "<leader>dO", dap.step_out, opts)
-keymap("n", "<leader>dr", dap.repl.toggle, opts)
-keymap("n", "<leader>dl", dap.run_last, opts)
-keymap("n", "<leader>dt", dap.terminate, opts)
-keymap("n", "<leader>du", require("dapui").toggle, opts)
