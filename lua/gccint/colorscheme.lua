@@ -1,10 +1,10 @@
-local colorscheme = "tokyonight"
+local colorscheme = "catppuccin"
 
-require("tokyonight").setup {
-    transparent = true,
-    dim_inactive = false,
-    style = "night",
-    lualine_bold = true,
+require(colorscheme).setup {
+    --    transparent = true,
+    --    dim_inactive = false,
+    --    style = "night",
+    --    lualine_bold = true,
 }
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

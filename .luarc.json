@@ -1,12 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
-    "Lua.diagnostics.disable": [
-        "param-type-mismatch",
-        "missing-parameter"
-    ],
-    "workspace.library": [
-        "${3rd}/luassert/library"
-    ],
     "diagnostics.globals": [
         "vim"
     ]
