@@ -36,6 +36,7 @@ A carefully designed Neovim configuration focused on modern development with exc
 ### Automatic Installation (Recommended)
 
 The easiest way to install this configuration is using the automated setup script, which will:
+
 - Detect your Linux distribution (Arch or Ubuntu/Debian)
 - Install all required dependencies
 - Back up any existing Neovim configuration
@@ -74,98 +75,100 @@ Plugins will be automatically installed on first launch via lazy.nvim.
 
 ## ⌨️ Key Mappings
 
-| Category | Key | Mode | Action |
-|----------|-----|------|--------|
-| **Leader** | `<Space>` | Normal | Leader key |
-| **Window Navigation** ||||
-| | `<C-h>` | Normal | Navigate left |
-| | `<C-j>` | Normal | Navigate down |
-| | `<C-k>` | Normal | Navigate up |
-| | `<C-l>` | Normal | Navigate right |
-| | `<C-Up/Down/Left/Right>` | Normal | Resize windows |
-| **Buffer Navigation** ||||
-| | `<S-h>` | Normal | Previous buffer |
-| | `<S-l>` | Normal | Next buffer |
-| | `<leader>bc` | Normal | Close buffer |
-| | `<leader>bn` | Normal | Next buffer |
-| | `<leader>bp` | Normal | Previous buffer |
-| **File Operations** ||||
-| | `<leader>ff` | Normal | Find files |
-| | `<leader>fg` | Normal | Live grep (search in files) |
-| | `<leader>fb` | Normal | Browse buffers |
-| | `<leader>fo` | Normal | Find recent files |
-| | `<leader>fe` | Normal | File explorer |
-| **UI Toggles** ||||
-| | `<leader>th` | Normal | Toggle search highlight |
-| | `<leader>tn` | Normal | Toggle relative numbers |
-| **Clipboard Operations** ||||
-| | `<leader>y` | Normal | Copy to system clipboard |
-| | `<leader>Y` | Normal | Copy to end of line to system clipboard |
-| | `<leader>y` | Visual | Copy selection to system clipboard |
-| | `<leader>yy` | Normal | Copy current line to system clipboard |
-| | `<leader>p` | Normal | Paste from system clipboard after cursor |
-| | `<leader>P` | Normal | Paste from system clipboard before cursor |
-| | `<leader>p` | Visual | Paste from system clipboard over selection |
-| **Text Manipulation** ||||
-| | `<` / `>` | Visual | Indent/unindent and stay in visual |
-| | `J` / `K` | Visual | Move selected text down/up |
-| | `p` | Visual | Paste without yanking |
+| Category                 | Key                      | Mode   | Action                                     |
+| ------------------------ | ------------------------ | ------ | ------------------------------------------ |
+| **Leader**               | `<Space>`                | Normal | Leader key                                 |
+| **Window Navigation**    |                          |        |                                            |
+|                          | `<C-h>`                  | Normal | Navigate left                              |
+|                          | `<C-j>`                  | Normal | Navigate down                              |
+|                          | `<C-k>`                  | Normal | Navigate up                                |
+|                          | `<C-l>`                  | Normal | Navigate right                             |
+|                          | `<C-Up/Down/Left/Right>` | Normal | Resize windows                             |
+| **Buffer Navigation**    |                          |        |                                            |
+|                          | `<S-h>`                  | Normal | Previous buffer                            |
+|                          | `<S-l>`                  | Normal | Next buffer                                |
+|                          | `<leader>bc`             | Normal | Close buffer                               |
+|                          | `<leader>bn`             | Normal | Next buffer                                |
+|                          | `<leader>bp`             | Normal | Previous buffer                            |
+| **File Operations**      |                          |        |                                            |
+|                          | `<leader>ff`             | Normal | Find files                                 |
+|                          | `<leader>fg`             | Normal | Live grep (search in files)                |
+|                          | `<leader>fb`             | Normal | Browse buffers                             |
+|                          | `<leader>fo`             | Normal | Find recent files                          |
+|                          | `<leader>fe`             | Normal | File explorer                              |
+| **UI Toggles**           |                          |        |                                            |
+|                          | `<leader>th`             | Normal | Toggle search highlight                    |
+|                          | `<leader>tn`             | Normal | Toggle relative numbers                    |
+| **Clipboard Operations** |                          |        |                                            |
+|                          | `<leader>y`              | Normal | Copy to system clipboard                   |
+|                          | `<leader>Y`              | Normal | Copy to end of line to system clipboard    |
+|                          | `<leader>y`              | Visual | Copy selection to system clipboard         |
+|                          | `<leader>yy`             | Normal | Copy current line to system clipboard      |
+|                          | `<leader>p`              | Normal | Paste from system clipboard after cursor   |
+|                          | `<leader>P`              | Normal | Paste from system clipboard before cursor  |
+|                          | `<leader>p`              | Visual | Paste from system clipboard over selection |
+| **Text Manipulation**    |                          |        |                                            |
+|                          | `<` / `>`                | Visual | Indent/unindent and stay in visual         |
+|                          | `J` / `K`                | Visual | Move selected text down/up                 |
+|                          | `p`                      | Visual | Paste without yanking                      |
 
 ### Git Features
 
-| Category | Key | Mode | Action |
-|----------|-----|------|--------|
-| **Neogit** ||||
-| | `<leader>gg` | Normal | Open Neogit main interface |
-| | `<leader>gc` | Normal | Neogit commit |
-| | `<leader>gp` | Normal | Neogit pull |
-| | `<leader>gP` | Normal | Neogit push |
-| **Git Conflict** ||||
-| | `<leader>gco` | Normal | Choose ours in conflict |
-| | `<leader>gct` | Normal | Choose theirs in conflict |
-| | `<leader>gcb` | Normal | Choose both in conflict |
-| | `<leader>gcn` | Normal | Choose none in conflict |
-| | `]x` | Normal | Next git conflict |
-| | `[x` | Normal | Previous git conflict |
-| **Git Hunks** ||||
-| | `<leader>hs` | Normal | Stage hunk |
-| | `<leader>hr` | Normal | Reset hunk |
-| | `<leader>hb` | Normal | Blame line |
-| | `<leader>hp` | Normal | Preview hunk |
-| | `<leader>hd` | Normal | Show diff |
-| | `]c` / `[c` | Normal | Next/previous hunk |
-| **Git Links** ||||
-| | `<leader>gl` | Normal | Get GitHub link |
-| | `<leader>gL` | Normal | Get GitHub link with line number |
-| **Git Telescope** ||||
-| | `<leader>gs` | Normal | Git status |
-| | `<leader>gb` | Normal | Git branches |
+| Category          | Key           | Mode   | Action                           |
+| ----------------- | ------------- | ------ | -------------------------------- |
+| **Neogit**        |               |        |                                  |
+|                   | `<leader>gg`  | Normal | Open Neogit main interface       |
+|                   | `<leader>gc`  | Normal | Neogit commit                    |
+|                   | `<leader>gp`  | Normal | Neogit pull                      |
+|                   | `<leader>gP`  | Normal | Neogit push                      |
+| **Git Conflict**  |               |        |                                  |
+|                   | `<leader>gco` | Normal | Choose ours in conflict          |
+|                   | `<leader>gct` | Normal | Choose theirs in conflict        |
+|                   | `<leader>gcb` | Normal | Choose both in conflict          |
+|                   | `<leader>gcn` | Normal | Choose none in conflict          |
+|                   | `]x`          | Normal | Next git conflict                |
+|                   | `[x`          | Normal | Previous git conflict            |
+| **Git Hunks**     |               |        |                                  |
+|                   | `<leader>hs`  | Normal | Stage hunk                       |
+|                   | `<leader>hr`  | Normal | Reset hunk                       |
+|                   | `<leader>hb`  | Normal | Blame line                       |
+|                   | `<leader>hp`  | Normal | Preview hunk                     |
+|                   | `<leader>hd`  | Normal | Show diff                        |
+|                   | `]c` / `[c`   | Normal | Next/previous hunk               |
+| **Git Links**     |               |        |                                  |
+|                   | `<leader>gl`  | Normal | Get GitHub link                  |
+|                   | `<leader>gL`  | Normal | Get GitHub link with line number |
+| **Git Telescope** |               |        |                                  |
+|                   | `<leader>gs`  | Normal | Git status                       |
+|                   | `<leader>gb`  | Normal | Git branches                     |
 
 ### LSP Features
 
-| Key | Mode | Action |
-|-----|------|--------|
-| `gd` | Normal | Go to definition |
-| `gr` | Normal | Go to references |
-| `gD` | Normal | Go to declaration |
-| `gi` | Normal | Go to implementation |
-| `K` | Normal | Show hover documentation |
-| `<leader>rn` | Normal | Rename symbol |
-| `<leader>ca` | Normal | Code actions |
-| `<leader>lf` | Normal | Format document |
-| `<leader>lf` | Visual | Format selection |
-| `[d` | Normal | Previous diagnostic |
-| `]d` | Normal | Next diagnostic |
+| Key          | Mode   | Action                   |
+| ------------ | ------ | ------------------------ |
+| `gd`         | Normal | Go to definition         |
+| `gr`         | Normal | Go to references         |
+| `gD`         | Normal | Go to declaration        |
+| `gi`         | Normal | Go to implementation     |
+| `K`          | Normal | Show hover documentation |
+| `<leader>rn` | Normal | Rename symbol            |
+| `<leader>ca` | Normal | Code actions             |
+| `<leader>lf` | Normal | Format document          |
+| `<leader>lf` | Visual | Format selection         |
+| `[d`         | Normal | Previous diagnostic      |
+| `]d`         | Normal | Next diagnostic          |
 
 ## 🧰 Plugin Ecosystem
 
 This configuration includes a carefully selected set of plugins for a complete development environment:
 
 ### Core
+
 - **[lazy.nvim](https://github.com/folke/lazy.nvim)**: Modern plugin manager
 - **[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**: Lua utilities
 
 ### UI
+
 - **[catppuccin/nvim](https://github.com/catppuccin/nvim)**: Modern, soft color scheme
 - **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Statusline with relative paths
 - **[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)**: Icons for UI components
@@ -174,6 +177,7 @@ This configuration includes a carefully selected set of plugins for a complete d
 - **[nvim-notify](https://github.com/rcarriga/nvim-notify)**: Notification system
 
 ### Editor Enhancements
+
 - **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder
 - **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Advanced syntax highlighting
 - **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Auto pair brackets and quotes
@@ -183,12 +187,14 @@ This configuration includes a carefully selected set of plugins for a complete d
 - **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**: File explorer
 
 ### Git Integration
+
 - **[Neogit](https://github.com/NeogitOrg/neogit)**: Magit-like interface for Git
 - **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git decorations and hunk management
 - **[git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)**: Git conflict resolution
 - **[repolink.nvim](https://github.com/9seconds/repolink.nvim)**: GitHub URL handler
 
 ### LSP and Completion
+
 - **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: LSP configuration
 - **[mason.nvim](https://github.com/williamboman/mason.nvim)**: LSP/DAP/linter manager
 - **[none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)**: Additional formatting/linting
@@ -211,7 +217,9 @@ This configuration is designed to be easily customizable:
 This configuration includes comprehensive Git integration:
 
 ### Neogit
+
 A Magit-inspired Git interface that provides a complete Git workflow within Neovim. Open with `<leader>gg` and:
+
 - Stage/unstage files and hunks
 - Commit changes with proper commit message editing
 - Pull/push to remote repositories
@@ -219,18 +227,23 @@ A Magit-inspired Git interface that provides a complete Git workflow within Neov
 - View commit history and diffs
 
 ### Git Conflict Resolution
+
 Visual indicators for merge conflicts with easy resolution commands:
+
 - Choose "ours", "theirs", both versions, or neither
 - Navigate between conflicts with `]x` and `[x`
 - Quickly resolve conflicts during merges and rebases
 
 ### Gitsigns
+
 Shows Git changes in the gutter with powerful hunk management:
+
 - Stage, reset, and navigate between hunks
 - Preview changes before committing
 - Toggle line blame and see commit information
 
 ### GitHub/GitLab Integration
+
 Easily get shareable links to your code with `<leader>gl` for collaborating with teammates.
 
 ## 📄 License
