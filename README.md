@@ -2,7 +2,7 @@
 
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
-![License](https://img.shields.io/github/license/neovim/neovim?style=for-the-badge&logo=)
+![License](https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge)
 
 A carefully designed Neovim configuration focused on modern development with exceptional code intelligence, aesthetics, and productivity enhancements.
 
