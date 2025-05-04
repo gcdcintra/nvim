@@ -9,6 +9,15 @@
 
   Neovim Configuration
   https://github.com/gcdcintra/nvim
+  
+  Feature highlights:
+  - Modern modular architecture with lazy loading
+  - Full LSP integration and intelligent code completion
+  - Advanced clipboard operations with leader key bindings
+  - Comprehensive Git workflow integration
+  - Elegant UI with Catppuccin theme
+  
+  Last updated: May 2025
 --]]
 
 -- Set leader keys

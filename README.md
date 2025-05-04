@@ -98,6 +98,14 @@ Plugins will be automatically installed on first launch via lazy.nvim.
 | **UI Toggles** ||||
 | | `<leader>th` | Normal | Toggle search highlight |
 | | `<leader>tn` | Normal | Toggle relative numbers |
+| **Clipboard Operations** ||||
+| | `<leader>y` | Normal | Copy to system clipboard |
+| | `<leader>Y` | Normal | Copy to end of line to system clipboard |
+| | `<leader>y` | Visual | Copy selection to system clipboard |
+| | `<leader>yy` | Normal | Copy current line to system clipboard |
+| | `<leader>p` | Normal | Paste from system clipboard after cursor |
+| | `<leader>P` | Normal | Paste from system clipboard before cursor |
+| | `<leader>p` | Visual | Paste from system clipboard over selection |
 | **Text Manipulation** ||||
 | | `<` / `>` | Visual | Indent/unindent and stay in visual |
 | | `J` / `K` | Visual | Move selected text down/up |

@@ -10,8 +10,10 @@
   - Buffer navigation and management
   - Visual mode operations
   - Text manipulation
+  - Clipboard operations with leader prefix
   - Leader key commands (organized for which-key integration)
   - Telescope integration
+  - Git operations
   - LSP functionality
 
   Each keymap includes a descriptive label for which-key integration and inline
@@ -123,6 +125,21 @@ map("n", "<C-u>", "<C-u>zz", "Move half page up and center view")
 map("n", "n", "nzzzv", "Go to next search result and center view")
 map("n", "N", "Nzzzv", "Go to previous search result and center view")
 map("n", "J", "mzJ`z", "Join line below and maintain cursor position")
+
+-- =============================================
+-- Clipboard operations
+-- =============================================
+
+-- Clipboard copy operations with leader prefix
+map("n", "<leader>y", '"+y', "Copy to system clipboard")
+map("n", "<leader>Y", '"+y$', "Copy to end of line to system clipboard")
+map("v", "<leader>y", '"+y', "Copy selection to system clipboard")
+map("n", "<leader>yy", '"+yy', "Copy current line to system clipboard")
+
+-- Clipboard paste operations with leader prefix
+map("n", "<leader>p", '"+p', "Paste from system clipboard after cursor")
+map("n", "<leader>P", '"+P', "Paste from system clipboard before cursor")
+map("v", "<leader>p", '"+p', "Paste from system clipboard over selection")
 
 -- =============================================
 -- Leader key mappings (for which-key)
@@ -277,6 +294,8 @@ if wk_ok then
     { "<leader>gp", name = "Git Pull/Push" },
     { "<leader>gl", name = "Git Links" },
     { "<leader>h", name = "Hunks" },
+    { "<leader>y", name = "Copy to clipboard" },
+    { "<leader>p", name = "Paste from clipboard" },
   })
 end
 
