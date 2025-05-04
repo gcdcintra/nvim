@@ -1,0 +1,5 @@
+# Cache directories
+cache/
+
+# Lazy.nvim files
+lazy-lock.json
