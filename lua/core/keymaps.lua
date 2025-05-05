@@ -3,7 +3,7 @@
   Description: Core keymaps configuration
 
   This file contains the configuration for all core keymaps in Neovim.
-  
+
   Keymaps are organized into logical sections:
   - General keymaps
   - Window navigation and resizing
@@ -317,10 +317,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 -- Lazygit integration (if installed)
-if vim.fn.executable('lazygit') == 1 then
+if vim.fn.executable("lazygit") == 1 then
   map("n", "<leader>gg", function()
     vim.cmd("terminal lazygit")
-    vim.cmd("startinsert")  -- Start in insert mode for terminal
+    vim.cmd("startinsert") -- Start in insert mode for terminal
   end, "Launch Lazygit")
 end
 
@@ -352,19 +352,11 @@ if lsp_ok then
   end, "Show available code actions")
 
   -- ---------------
-  -- Diagnostics Navigation
+  -- Diagnostics
   -- ---------------
   map("n", "<leader>do", function()
     vim.diagnostic.open_float()
   end, "Show diagnostic message in floating window")
-
-  map("n", "[d", function()
-    vim.diagnostic.jump({ count = -1 })
-  end, "Jump to previous diagnostic")
-
-  map("n", "]d", function()
-    vim.diagnostic.jump({ count = 1 })
-  end, "Jump to next diagnostic") -- Fixed the count to 1 for next diagnostic
 
   -- ---------------
   -- Formatting

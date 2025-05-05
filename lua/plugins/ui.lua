@@ -102,7 +102,7 @@ return {
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { 
+          lualine_c = {
             {
               "filename",
               path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
@@ -114,7 +114,7 @@ return {
                 unnamed = "[No Name]",
                 newfile = "[New]",
               },
-            }
+            },
           },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },

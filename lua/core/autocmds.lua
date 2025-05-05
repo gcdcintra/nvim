@@ -98,3 +98,44 @@ autocmd({ "BufReadPost" }, {
     vim.cmd('silent! normal! g`"zv')
   end,
 })
+
+-- Create user commands
+local create_user_commands = function()
+  -- Command to create a .clang-format file from template
+  vim.api.nvim_create_user_command("ClangFormatInit", function()
+    local template_path = vim.fn.stdpath("config") .. "/templates/.clang-format"
+    local target_path = vim.fn.getcwd() .. "/.clang-format"
+
+    -- Check if template exists
+    if vim.fn.filereadable(template_path) == 0 then
+      vim.notify("Template .clang-format file not found", vim.log.levels.ERROR)
+      return
+    end
+
+    -- Check if target already exists
+    if vim.fn.filereadable(target_path) == 1 then
+      local choice = vim.fn.input("A .clang-format file already exists. Overwrite? (y/n): ")
+      if choice:lower() ~= "y" then
+        vim.notify("Operation cancelled", vim.log.levels.INFO)
+        return
+      end
+    end
+
+    -- Copy the template
+    local success, err = pcall(function()
+      local content = vim.fn.readfile(template_path)
+      vim.fn.writefile(content, target_path)
+    end)
+
+    if success then
+      vim.notify("Created .clang-format file in the current directory", vim.log.levels.INFO)
+    else
+      vim.notify("Failed to create .clang-format file: " .. tostring(err), vim.log.levels.ERROR)
+    end
+  end, { desc = "Create a .clang-format file in the current directory" })
+
+  -- Add more user commands here
+end
+
+-- Create user commands
+create_user_commands()

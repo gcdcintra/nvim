@@ -50,8 +50,14 @@ return {
         keymap("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
         keymap("n", "<leader>D", vim.lsp.buf.type_definition, "Type Definition")
         keymap("n", "<leader>d", vim.diagnostic.open_float, "Line Diagnostics")
-        --[[ keymap("n", "[d", vim.diagnostic.jump( { "pos" = pos +1 } ), "Previous Diagnostic") ]]
-        --[[ keymap("n", "]d", vim.diagnostic.goto_next, "Next Diagnostic") ]]
+
+        -- C/C++-specific keymaps for switching between header and source files
+        local buf_ft = vim.bo[bufnr].filetype
+        if buf_ft == "c" or buf_ft == "cpp" or buf_ft == "objc" then
+          keymap("n", "<leader>th", function() 
+            vim.cmd("ClangdSwitchSourceHeader")
+          end, "Toggle Header/Source")
+        end
 
         -- Format commands for both whole file and selection
         if client.supports_method("textDocument/formatting") then
@@ -119,6 +125,12 @@ return {
               "--completion-style=detailed",
               "--function-arg-placeholders",
               "--fallback-style=llvm",
+              "--background-index", -- Index project in background for better performance
+              "--clang-tidy", -- Enable clang-tidy diagnostics
+              "--all-scopes-completion", -- Complete from all accessible scopes
+              "--pch-storage=memory", -- Store PCHs in memory for better performance
+              "--cross-file-rename", -- Enable rename across files
+              "--completion-parse=auto", -- Auto-select parse mode for completion
             }
           elseif server_name == "diagnosticls" then
             -- Configure diagnosticls for formatting
@@ -283,7 +295,9 @@ return {
         -- Attach format handlers
         on_attach = function(client, bufnr)
           -- Register format capability detection
-          if client.supports_method("textDocument/formatting") or client.supports_method("textDocument/rangeFormatting") then
+          if
+            client.supports_method("textDocument/formatting") or client.supports_method("textDocument/rangeFormatting")
+          then
             vim.api.nvim_create_autocmd("BufWritePre", {
               buffer = bufnr,
               callback = function()

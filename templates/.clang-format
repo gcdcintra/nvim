@@ -1,0 +1,58 @@
+---
+# A comprehensive .clang-format file with modern C++ formatting
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Basic Layout
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+# Braces and Indentation
+BreakBeforeBraces: Allman
+IndentCaseLabels: true
+IndentCaseBlocks: true
+IndentPPDirectives: AfterHash
+NamespaceIndentation: Inner
+
+# Line Breaks
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+
+# Alignment and Spacing
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: Align
+AlignTrailingComments: true
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Function Declarations and Calls
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackArguments: false
+BinPackParameters: false
+
+# Classes and Structs
+AccessModifierOffset: -4
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+FixNamespaceComments: true
+SortIncludes: Always
+SortUsingDeclarations: true
+
+# Modern C++ Features
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCpp11BracedList: false
+SpaceInEmptyBlock: false
+
+# Keep pragma directives in place
+IncludeBlocks: Preserve
+
+# Comments
+ReflowComments: true
+---

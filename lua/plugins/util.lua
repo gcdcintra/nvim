@@ -98,7 +98,7 @@ return {
         ["^call "] = "",
         ["^lua "] = "",
       },
-      show_help = false,  -- Hide help message at the bottom of popup
+      show_help = false, -- Hide help message at the bottom of popup
     },
     config = function(_, opts)
       local wk = require("which-key")

@@ -51,43 +51,43 @@ return {
           selection_caret = "▶ ",
           prompt_prefix = " 󰭎 ",
           entry_prefix = "  ", -- Consistent spacing for unselected entries
-          
+
           initial_mode = "insert",
           selection_strategy = "reset",
           path_display = { "truncate" },
           sorting_strategy = "ascending",
           layout_strategy = "horizontal",
-          
+
           -- Make sure the layout settings are consistent
           layout_config = {
             horizontal = {
               prompt_position = "top",
-              preview_width = 0.60,  -- Increasing preview width for better file viewing
-              results_width = 0.40,  -- Adjusting results width accordingly
-              width = 0.92,          -- Wider overall window
-              height = 0.85,         -- Taller window for better visibility
+              preview_width = 0.60, -- Increasing preview width for better file viewing
+              results_width = 0.40, -- Adjusting results width accordingly
+              width = 0.92, -- Wider overall window
+              height = 0.85, -- Taller window for better visibility
               preview_cutoff = 120,
             },
             vertical = {
               mirror = false,
-              width = 0.90,         -- Consistent width in vertical layout
-              height = 0.85,        -- Consistent height in vertical layout
+              width = 0.90, -- Consistent width in vertical layout
+              height = 0.85, -- Consistent height in vertical layout
               preview_height = 0.60, -- Preview takes more space in vertical mode
             },
-            width = 0.92,           -- Overall wider window
-            height = 0.85,          -- Overall taller window
+            width = 0.92, -- Overall wider window
+            height = 0.85, -- Overall taller window
           },
-          
+
           -- Improved borders for a cleaner look
           borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-          
+
           file_ignore_patterns = {
             ".git/",
             "node_modules/",
             "target/",
             "docs/",
           },
-          
+
           mappings = {
             i = {
               ["<C-n>"] = actions.cycle_history_next,
@@ -141,7 +141,7 @@ return {
             "--hidden",
           },
         },
-        
+
         -- Configure specific pickers with consistent displays
         pickers = {
           find_files = {
@@ -178,7 +178,7 @@ return {
             show_version = true,
           },
         },
-        
+
         extensions = {
           fzf = {
             fuzzy = true,

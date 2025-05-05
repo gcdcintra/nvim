@@ -24,7 +24,7 @@ return {
         config = function()
           require("luasnip").setup({
             history = true,
-            update_events = {"TextChanged", "TextChangedI"},
+            update_events = { "TextChanged", "TextChangedI" },
             delete_check_events = "TextChanged",
           })
         end,

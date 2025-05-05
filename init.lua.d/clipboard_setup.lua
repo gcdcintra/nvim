@@ -1,29 +1,28 @@
--- Ensure clipboard works properly
-if vim.fn.executable('xclip') == 1 then
+if vim.fn.executable("xclip") == 1 then
   -- Use xclip if available (first preference)
   vim.g.clipboard = {
-    name = 'xclip_clipboard',
+    name = "xclip_clipboard",
     copy = {
-      ['+'] = 'xclip -selection clipboard',
-      ['*'] = 'xclip -selection primary',
+      ["+"] = "xclip -selection clipboard",
+      ["*"] = "xclip -selection primary",
     },
     paste = {
-      ['+'] = 'xclip -selection clipboard -o',
-      ['*'] = 'xclip -selection primary -o',
+      ["+"] = "xclip -selection clipboard -o",
+      ["*"] = "xclip -selection primary -o",
     },
     cache_enabled = 1,
   }
-elseif vim.fn.executable('xsel') == 1 then
+elseif vim.fn.executable("xsel") == 1 then
   -- Use xsel as fallback
   vim.g.clipboard = {
-    name = 'xsel_clipboard',
+    name = "xsel_clipboard",
     copy = {
-      ['+'] = 'xsel --clipboard --input',
-      ['*'] = 'xsel --primary --input',
+      ["+"] = "xsel --clipboard --input",
+      ["*"] = "xsel --primary --input",
     },
     paste = {
-      ['+'] = 'xsel --clipboard --output',
-      ['*'] = 'xsel --primary --output',
+      ["+"] = "xsel --clipboard --output",
+      ["*"] = "xsel --primary --output",
     },
     cache_enabled = 1,
   }
