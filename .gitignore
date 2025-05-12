@@ -1,5 +1,6 @@
-# Cache directories
+.vscode/
 cache/
 
-# Lazy.nvim files
+.version
+.luarc.json
 lazy-lock.json

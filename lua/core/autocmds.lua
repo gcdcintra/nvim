@@ -40,7 +40,6 @@ autocmd("FileType", {
     "help",
     "man",
     "notify",
-    "lspinfo",
     "spectre_panel",
     "startuptime",
     "tsplayground",
@@ -63,8 +62,6 @@ autocmd("BufWritePre", {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
-
--- LSP Autocommands
 
 -- Remove whitespace on save
 autocmd("BufWritePre", {

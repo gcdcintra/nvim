@@ -1,17 +1,11 @@
 --[[
-  File: plugins/init.lua
-  Description: Plugin manager configuration and core plugin setup
-
-  This file configures lazy.nvim, the plugin manager, and defines
-  core plugin settings. Each plugin or related group of plugins
-  is defined in its own file within the plugins directory.
+  File: core/lazy.lua
+  Description: Plugin manager configuration
 --]]
 
 local M = {}
 
--- Function to bootstrap and configure lazy.nvim
 function M.setup()
-  -- Bootstrap lazy.nvim if not installed
   local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
   if not vim.loop.fs_stat(lazypath) then
     vim.notify("Installing lazy.nvim...", vim.log.levels.INFO)
@@ -64,10 +58,6 @@ function M.setup()
     -- Other plugin manager settings
     change_detection = {
       notify = false, -- Don't notify on config file changes
-    },
-    -- LuaRocks configuration
-    rocks = {
-      enabled = false, -- Disable luarocks by default since we set it manually in early_init
     },
   })
 end

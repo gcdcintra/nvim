@@ -14,7 +14,6 @@
   - Leader key commands (organized for which-key integration)
   - Telescope integration
   - Git operations
-  - LSP functionality
 
   Each keymap includes a descriptive label for which-key integration and inline
   documentation explaining its purpose.
@@ -234,25 +233,6 @@ if telescope_loaded then
   end, "Browse and switch git branches")
 
   -- ---------------
-  -- LSP Operations
-  -- ---------------
-  map("n", "<leader>ls", function()
-    builtin.lsp_document_symbols()
-  end, "List symbols in current document")
-
-  map("n", "<leader>lr", function()
-    builtin.lsp_references()
-  end, "Find references to symbol under cursor")
-
-  map("n", "<leader>ld", function()
-    builtin.diagnostics({ bufnr = 0 })
-  end, "List diagnostics in current buffer")
-
-  map("n", "<leader>lD", function()
-    builtin.diagnostics()
-  end, "List diagnostics in workspace")
-
-  -- ---------------
   -- Additional Telescope Features
   -- ---------------
   map("n", "<leader>fm", function()
@@ -322,66 +302,4 @@ if vim.fn.executable('lazygit') == 1 then
     vim.cmd("terminal lazygit")
     vim.cmd("startinsert")  -- Start in insert mode for terminal
   end, "Launch Lazygit")
-end
-
--- =============================================
--- LSP mappings (only added if LSP is available)
--- =============================================
-local lsp_ok, _ = pcall(require, "lspconfig")
-if lsp_ok then
-  -- ---------------
-  -- LSP Information
-  -- ---------------
-  map("n", "K", function()
-    vim.lsp.buf.hover()
-  end, "Show documentation for symbol under cursor")
-
-  -- ---------------
-  -- Code Manipulation
-  -- ---------------
-  map("n", "<leader>rn", function()
-    vim.lsp.buf.rename()
-  end, "Rename symbol under cursor")
-
-  map("n", "<leader>gr", function()
-    vim.lsp.buf.references()
-  end, "Find all references to symbol under cursor")
-
-  map("n", "<leader>ca", function()
-    vim.lsp.buf.code_action()
-  end, "Show available code actions")
-
-  -- ---------------
-  -- Diagnostics Navigation
-  -- ---------------
-  map("n", "<leader>do", function()
-    vim.diagnostic.open_float()
-  end, "Show diagnostic message in floating window")
-
-  map("n", "[d", function()
-    vim.diagnostic.jump({ count = -1 })
-  end, "Jump to previous diagnostic")
-
-  map("n", "]d", function()
-    vim.diagnostic.jump({ count = 1 })
-  end, "Jump to next diagnostic") -- Fixed the count to 1 for next diagnostic
-
-  -- ---------------
-  -- Formatting
-  -- ---------------
-  map("n", "<leader>lf", function()
-    vim.lsp.buf.format({ async = true })
-  end, "Format entire document")
-
-  map("v", "<leader>lf", function()
-    local start_row, _ = unpack(vim.api.nvim_buf_get_mark(0, "<"))
-    local end_row, _ = unpack(vim.api.nvim_buf_get_mark(0, ">"))
-    vim.lsp.buf.format({
-      async = true,
-      range = {
-        ["start"] = { start_row, 0 },
-        ["end"] = { end_row, 0 },
-      },
-    })
-  end, "Format selected text")
 end
