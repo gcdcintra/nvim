@@ -7,7 +7,7 @@
 A carefully designed Neovim configuration focused on modern development with exceptional code intelligence, aesthetics, and productivity enhancements.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" alt="Catppuccin Theme" width="600px"/>
+  <img src="https://camo.githubusercontent.com/410b3ab80570bcd5b470a08d84f93caa5b4962ccd994ebceeb3d1f78364c2120/687474703a2f2f692e696d6775722e636f6d2f776136363678672e706e67" alt="Gruvbox Theme" width="600px"/>
 </div>
 
 ## ✨ Features
@@ -18,7 +18,7 @@ A carefully designed Neovim configuration focused on modern development with exc
 - **🧠 LSP Integration** - Full language server support for Lua, C/C++, and more
 - **✏️ Smart Formatting** - Auto-formatting with range support
 - **🛠️ Code Completion** - Context-aware suggestions with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- **🎨 Beautiful UI** - Elegant [Catppuccin](https://github.com/catppuccin/nvim) theme with custom integrations
+- **🎨 Beautiful UI** - Classic [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim) theme with custom integrations
 - **📊 Status Line** - Informative and attractive status line with relative paths
 - **🧩 Modular Design** - Easily customizable configuration structure
 - **🔄 Git Integration** - Comprehensive Git workflow with [Neogit](https://github.com/NeogitOrg/neogit) and conflict resolution
@@ -169,7 +169,7 @@ This configuration includes a carefully selected set of plugins for a complete d
 
 ### UI
 
-- **[catppuccin/nvim](https://github.com/catppuccin/nvim)**: Modern, soft color scheme
+- **[gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)**: Retro groove colorscheme
 - **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Statusline with relative paths
 - **[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)**: Icons for UI components
 - **[which-key.nvim](https://github.com/folke/which-key.nvim)**: Displays keybinding help
@@ -254,5 +254,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [Neovim](https://neovim.io/) - The future of Vim
 - [LazyVim](https://github.com/LazyVim/LazyVim) - Inspiration for modular configuration
-- [Catppuccin Theme](https://github.com/catppuccin/nvim) - Beautiful color scheme
+- [Gruvbox Theme](https://github.com/ellisonleao/gruvbox.nvim) - Retro groove color scheme
 - [Neogit](https://github.com/NeogitOrg/neogit) - Git interface inspiration

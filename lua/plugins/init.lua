@@ -1,5 +1,6 @@
 return {
   require("plugins.completion.blink_cmp"),
+  require("plugins.completion.copilot"),
   require("plugins.editor.autopairs"),
   require("plugins.editor.comment"),
   require("plugins.editor.indent-blankline"),
@@ -13,7 +14,7 @@ return {
   require("plugins.tools.toggleterm"),
   require("plugins.tools.telescope.telescope"),
   require("plugins.treesitter.treesitter"),
-  require("plugins.ui.catppuccin"),
+  require("plugins.ui.gruvbox"),
   require("plugins.ui.dressing"),
   require("plugins.ui.lualine"),
   require("plugins.ui.nvim-notify"),

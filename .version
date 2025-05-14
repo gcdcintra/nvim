@@ -1,6 +1,5 @@
 # Neovim configuration version
-VERSION="2.0.1"
-LAST_UPDATED="2025-05-12"
-INSTALLER_DATE="2025-05-12"
-CONFIG_PATH="/home/xanadu/work/nvim"
-PYTHON_PROVIDER="/home/xanadu/.local/share/nvim-venv/bin/python"
+VERSION="2.1.0"
+LAST_UPDATED="2025-05-13"
+INSTALLER_DATE="2025-05-14"
+CONFIG_PATH="/home/xanadu/work/nvim"\nPYTHON_PROVIDER="/home/xanadu/.local/share/nvim-venv/bin/python"

@@ -4,3 +4,4 @@ cache/
 .version
 .luarc.json
 lazy-lock.json
+lua/core/providers.lua

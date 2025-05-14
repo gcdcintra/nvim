@@ -60,8 +60,6 @@ function M.setup()
       notify = false, -- Don't notify on config file changes
     },
   })
-
-  print("Lazy.nvim setup: Loading plugins module...")
 end
 
 return M
