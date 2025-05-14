@@ -60,7 +60,7 @@ return {
         -- Make sure the layout settings are consistent
         layout_config = {
           horizontal = {
-            prompt_position = "top",
+            prompt_position = "bottom",
             preview_width = 0.60,  -- Increasing preview width for better file viewing
             results_width = 0.40,  -- Adjusting results width accordingly
             width = 0.92,          -- Wider overall window

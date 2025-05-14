@@ -6,10 +6,19 @@ return {
   build = ":MasonUpdate",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
-    "jay-babu/mason-none-ls.nvim",
   },
   config = function()
-    require("mason").setup()
+    require("mason").setup({
+      ui = {
+        border = "rounded",
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    })
+
     require("mason-lspconfig").setup({
       ensure_installed = {
         "clangd",      -- C/C++
@@ -17,17 +26,6 @@ return {
         "bashls",      -- Bash/Zsh
         "pyright",     -- Python
         "lua_ls",      -- Lua
-      },
-      automatic_installation = true,
-    })
-    require("mason-none-ls").setup({
-      ensure_installed = {
-        "shfmt",       -- Bash/Zsh formatter
-        "shellcheck",  -- Bash/Zsh linter
-        "clang-format",-- C/C++ formatter
-        "black",       -- Python formatter
-        "flake8",      -- Python linter
-        "stylua",      -- Lua formatter
       },
       automatic_installation = true,
     })
