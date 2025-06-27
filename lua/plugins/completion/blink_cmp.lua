@@ -3,6 +3,7 @@
 
 return {
   "saghen/blink.cmp",
+  version = "1.*",
   dependencies = {
     "neovim/nvim-lspconfig", -- LSP support
     "L3MON4D3/LuaSnip", -- Snippet support
@@ -14,7 +15,13 @@ return {
       nerd_font_variant = "mono",
     },
     completion = {
-      documentation = { auto_show = false },
+      menu = {
+      },
+      documentation = {
+        window = {
+        },
+        auto_show = true,
+      },
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
@@ -23,12 +30,21 @@ return {
     snippets = { preset = "luasnip" },
   },
   config = function(_, opts)
+    require("blink.cmp").setup(opts)
+
+    vim.keymap.set("i", "<C-y>", function()
+      require("blink.cmp").complete()
+    end, { noremap = true, silent = true })
+
     local lspconfig = require("lspconfig")
     local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     -- Configure LSP servers
     local servers = {
-      clangd = {},
+      clangd = {
+        cmd = { "clangd", "--background-index" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+      },
       cmake = {},
       bashls = {},
       pylsp = {},

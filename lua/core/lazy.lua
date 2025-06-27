@@ -33,7 +33,7 @@ function M.setup()
     },
     -- Plugin installation settings
     install = {
-      colorscheme = { "gruvbox" }, -- Colorscheme to use during installation
+      colorscheme = { "catppuccin" }, -- Default colorscheme to install
     },
     -- Update checker configuration
     checker = {

@@ -3,7 +3,7 @@
   Description: Core keymaps configuration
 
   This file contains the configuration for all core keymaps in Neovim.
-  
+
   Keymaps are organized into logical sections:
   - General keymaps
   - Window navigation and resizing
@@ -114,6 +114,19 @@ end, "Move selected block up one line")
 
 -- Paste without overwriting register content
 map("v", "p", '"_dP', "Paste over selection without yanking it")
+
+-- =============================================
+-- LSP keymaps
+-- =============================================
+map("n", "<M-e>", vim.lsp.buf.declaration, "LSP: Go to declaration")
+map("n", "<M-w>", vim.lsp.buf.definition, "LSP: Go to definition")
+map("n", "<M-s>", function()
+  vim.cmd("ClangdSwitchSourceHeader")
+end, "LSP: Switch header/source")
+map("n", "<M-d>", function()
+  vim.lsp.buf.references()
+  vim.cmd("Telescope lsp_references")
+end, "LSP: Find all uses and send to quickfix")
 
 -- ---------------
 -- View Centering

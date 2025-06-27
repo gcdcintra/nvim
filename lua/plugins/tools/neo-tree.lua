@@ -1,7 +1,7 @@
 --[[
   File: neo-tree.lua
   Description: File explorer for Neovim
-  
+
   Features:
   - Modern file explorer with icons
   - Git integration

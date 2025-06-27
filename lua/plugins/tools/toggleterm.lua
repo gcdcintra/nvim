@@ -1,7 +1,7 @@
 --[[
   File: toggleterm.lua
   Description: Terminal integration for Neovim
-  
+
   Features:
   - Floating terminal window
   - Easy toggle with keybinding
@@ -27,9 +27,9 @@ return {
     direction = "float",
     close_on_exit = true,
     shell = vim.o.shell,
-    float_opts = {
-      border = "curved",
-      winblend = 0,
+      float_opts = {
+        anchors = "auto-center",
+      border = "rounded",
       highlights = {
         border = "Normal",
         background = "Normal",
