@@ -8,7 +8,7 @@
 return {
   require("plugins.completion.blink_cmp"),
   require("plugins.completion.github_copilot"),
----  require("plugins.completion.copilot_chat"),
+  require("plugins.completion.copilot_chat"),
   require("plugins.editor.autopairs"),
   require("plugins.editor.comment"),
   require("plugins.editor.indent-blankline"),
