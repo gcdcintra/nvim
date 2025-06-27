@@ -1,3 +1,10 @@
+--[[ File: lua/plugins/init.lua
+  Description: Plugin loader for Neovim configuration
+
+  This file serves as the central entry point for loading all Neovim plugins.
+  Plugins are organized into logical categories for better management and clarity.
+--]]
+
 return {
   require("plugins.completion.blink_cmp"),
   require("plugins.completion.github_copilot"),

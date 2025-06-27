@@ -1,3 +1,13 @@
+--[[ File: lua/core/autocmds.lua
+  Description: Neovim Autocommands Configuration
+
+  This file defines various autocommands to automate tasks and enhance the
+  editor's behavior based on events like file type, buffer changes, and window
+  resizing.
+
+  Autocommands are organized into logical groups for clarity and maintainability.
+--]]
+
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 

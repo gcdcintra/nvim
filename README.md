@@ -4,24 +4,24 @@
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
 ![License](https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge)
 
-A carefully designed Neovim configuration focused on modern development with exceptional code intelligence, aesthetics, and productivity enhancements.
+A Neovim configuration designed for modern development, focusing on code intelligence, aesthetics, and productivity.
 
 <div align="center">
   <img src="https://camo.githubusercontent.com/410b3ab80570bcd5b470a08d84f93caa5b4962ccd994ebceeb3d1f78364c2120/687474703a2f2f692e696d6775722e636f6d2f776136363678672e706e67" alt="Gruvbox Theme" width="600px"/>
 </div>
 
-## ✨ Features
+## Features
 
-- **🚀 Lazy Loading** - Blazing fast startup with [lazy.nvim](https://github.com/folke/lazy.nvim)
-- **🔍 Intelligent Code Navigation** - Powered by [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- **🌲 Advanced Syntax Highlighting** - Using [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- **🧠 LSP Integration** - Full language server support for Lua, C/C++, and more
-- **✏️ Smart Formatting** - Auto-formatting with range support
-- **🛠️ Code Completion** - Context-aware suggestions with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- **🎨 Beautiful UI** - Classic [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim) theme with custom integrations
-- **📊 Status Line** - Informative and attractive status line with relative paths
-- **🧩 Modular Design** - Easily customizable configuration structure
-- **🔄 Git Integration** - Comprehensive Git workflow with [Neogit](https://github.com/NeogitOrg/neogit) and conflict resolution
+- **Lazy Loading**: Utilizes [lazy.nvim](https://github.com/folke/lazy.nvim) for efficient plugin loading and fast startup times.
+- **Code Navigation**: Implemented with [Telescope](https://github.com/nvim-telescope/telescope.nvim) for fuzzy finding and project navigation.
+- **Syntax Highlighting**: Provided by [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter) for advanced syntax parsing and highlighting.
+- **LSP Integration**: Supports Language Server Protocol for various languages, including Lua and C/C++.
+- **Formatting**: Configured for automatic code formatting with range support.
+- **Code Completion**: Offers context-aware code suggestions via [blink.cmp](https://github.com/saghen/blink.cmp).
+- **User Interface**: Features [Catppuccin](https://github.com/catppuccin/nvim) and [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim) themes with custom integrations.
+- **Status Line**: Displays informative status line with relative paths.
+- **Modular Design**: Configured with a modular structure to facilitate customization.
+- **Git Integration**: Provides a comprehensive Git workflow through [Neogit](https://github.com/NeogitOrg/neogit) and related tools.
 
 ## 📦 Installation
 
@@ -111,6 +111,8 @@ Plugins will be automatically installed on first launch via lazy.nvim.
 |                          | `<` / `>`                | Visual | Indent/unindent and stay in visual         |
 |                          | `J` / `K`                | Visual | Move selected text down/up                 |
 |                          | `p`                      | Visual | Paste without yanking                      |
+| **Completion**           |                          |        |                                            |
+|                          | `<M-]>`                 | Insert | Trigger Copilot completion                 |
 
 ### Git Features
 
@@ -158,48 +160,48 @@ Plugins will be automatically installed on first launch via lazy.nvim.
 | `[d`         | Normal | Previous diagnostic      |
 | `]d`         | Normal | Next diagnostic          |
 
-## 🧰 Plugin Ecosystem
+## Plugin Ecosystem
 
-This configuration includes a carefully selected set of plugins for a complete development environment:
+This configuration integrates a curated set of plugins to provide a comprehensive development environment:
 
 ### Core
 
-- **[lazy.nvim](https://github.com/folke/lazy.nvim)**: Modern plugin manager
-- **[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**: Lua utilities
+- **[lazy.nvim](https://github.com/folke/lazy.nvim)**: Plugin manager for Neovim.
+- **[plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**: Provides Lua utility functions.
 
 ### UI
 
-- **[gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)**: Retro groove colorscheme
-- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Statusline with relative paths
-- **[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)**: Icons for UI components
-- **[which-key.nvim](https://github.com/folke/which-key.nvim)**: Displays keybinding help
-- **[dressing.nvim](https://github.com/stevearc/dressing.nvim)**: Better UI elements
-- **[nvim-notify](https://github.com/rcarriga/nvim-notify)**: Notification system
+- **[gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)**: Colorscheme.
+- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Configurable statusline.
+- **[nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)**: Provides file icons for UI components.
+- **[which-key.nvim](https://github.com/folke/which-key.nvim)**: Displays keybinding hints.
+- **[dressing.nvim](https://github.com/stevearc/dressing.nvim)**: Enhances UI elements.
+- **[nvim-notify](https://github.com/rcarriga/nvim-notify)**: Notification system.
 
 ### Editor Enhancements
 
-- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder
-- **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Advanced syntax highlighting
-- **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Auto pair brackets and quotes
-- **[Comment.nvim](https://github.com/numToStr/Comment.nvim)**: Smart commenting
-- **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Manipulate surroundings
-- **[toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)**: Terminal integration
-- **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**: File explorer
+- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder for files and content.
+- **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Provides advanced syntax highlighting and parsing.
+- **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Automatically inserts and deletes paired characters.
+- **[Comment.nvim](https://github.com/numToStr/Comment.nvim)**: Provides smart commenting functionality.
+- **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Facilitates manipulation of surrounding characters.
+- **[toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)**: Integrates terminal functionality within Neovim.
+- **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)**: File explorer plugin.
 
 ### Git Integration
 
-- **[Neogit](https://github.com/NeogitOrg/neogit)**: Magit-like interface for Git
-- **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git decorations and hunk management
-- **[git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)**: Git conflict resolution
-- **[repolink.nvim](https://github.com/9seconds/repolink.nvim)**: GitHub URL handler
+- **[Neogit](https://github.com/NeogitOrg/neogit)**: Provides a Magit-like interface for Git operations.
+- **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Displays Git changes in the sign column and provides hunk management.
+- **[git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)**: Assists in resolving Git merge conflicts.
+- **[repolink.nvim](https://github.com/9seconds/repolink.nvim)**: Generates repository links for GitHub, GitLab, and Bitbucket.
 
 ### LSP and Completion
 
-- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: LSP configuration
-- **[mason.nvim](https://github.com/williamboman/mason.nvim)**: LSP/DAP/linter manager
-- **[none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)**: Additional formatting/linting
-- **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)**: Completion engine
-- **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)**: Snippet engine
+- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Configuration for Neovim's built-in LSP client.
+- **[mason.nvim](https://github.com/williamboman/mason.nvim)**: Manages and installs LSP servers, DAP servers, linters, and formatters.
+- **[none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)**: Provides additional formatting and linting capabilities.
+- **[blink.cmp](https://github.com/saghen/blink.cmp)**: Completion engine.
+- **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)**: Snippet engine.
 
 ## 🔧 Customization
 
@@ -212,47 +214,47 @@ This configuration is designed to be easily customizable:
 5. **Styling**: Adjust theme settings in `lua/plugins/ui.lua`
 6. **Git**: Customize Git integration in `lua/plugins/git.lua`
 
-## 🌟 Git Workflow Features
+## Git Workflow Features
 
-This configuration includes comprehensive Git integration:
+This configuration provides integrated Git functionality:
 
 ### Neogit
 
-A Magit-inspired Git interface that provides a complete Git workflow within Neovim. Open with `<leader>gg` and:
+Neogit offers a comprehensive Git interface within Neovim. It enables:
 
-- Stage/unstage files and hunks
-- Commit changes with proper commit message editing
-- Pull/push to remote repositories
-- Browse and manage branches
-- View commit history and diffs
+- Staging and unstaging of files and hunks.
+- Committing changes with integrated message editing.
+- Pulling and pushing to remote repositories.
+- Branch management and navigation.
+- Viewing commit history and diffs.
 
 ### Git Conflict Resolution
 
-Visual indicators for merge conflicts with easy resolution commands:
+Visual indicators for merge conflicts are provided, along with commands for resolution:
 
-- Choose "ours", "theirs", both versions, or neither
-- Navigate between conflicts with `]x` and `[x`
-- Quickly resolve conflicts during merges and rebases
+- Options to choose "ours", "theirs", both versions, or neither.
+- Navigation between conflicts using `]x` and `[x`.
+- Streamlined conflict resolution during merges and rebases.
 
 ### Gitsigns
 
-Shows Git changes in the gutter with powerful hunk management:
+Gitsigns displays Git changes in the gutter and provides hunk management capabilities:
 
-- Stage, reset, and navigate between hunks
-- Preview changes before committing
-- Toggle line blame and see commit information
+- Staging, resetting, and navigating between hunks.
+- Previewing changes before committing.
+- Toggling line blame information.
 
 ### GitHub/GitLab Integration
 
-Easily get shareable links to your code with `<leader>gl` for collaborating with teammates.
+Shareable links to code can be generated using `<leader>gl` for collaborative workflows.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
-- [Neovim](https://neovim.io/) - The future of Vim
-- [LazyVim](https://github.com/LazyVim/LazyVim) - Inspiration for modular configuration
-- [Gruvbox Theme](https://github.com/ellisonleao/gruvbox.nvim) - Retro groove color scheme
-- [Neogit](https://github.com/NeogitOrg/neogit) - Git interface inspiration
+- [Neovim](https://neovim.io/)
+- [LazyVim](https://github.com/LazyVim/LazyVim): Inspiration for modular configuration.
+- [Gruvbox Theme](https://github.com/ellisonleao/gruvbox.nvim)
+- [Neogit](https://github.com/NeogitOrg/neogit): Git interface inspiration.
